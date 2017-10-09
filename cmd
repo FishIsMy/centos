@@ -1,1 +1,1 @@
-xgmma -gmma 0.6  #调整屏幕亮度
+xgamma -gamma 0.6  #调整屏幕亮度
