@@ -9,4 +9,4 @@ git add cmd     /*添加文件到跟踪流*/
 git commit -m "promote lines"   /*提交到本地仓库*/
 git remote add origin git@github.com:FishIsMy/centos.git    /*需要执行git init进行初始化*/
 git push -u origin master       /*推送到远程仓库分支下*/
-
+123
