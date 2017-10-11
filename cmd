@@ -36,7 +36,7 @@ i#cp
 #grep entry /usr/share/gedit/plugins/snippets/docbook.xml >> /root/lines
 #find /etc -name "host*" -print /*查找/etc中所有以host开头的文件*/
 # find / -perm -4000 -print /*搜索整个系统中所有包含SUID的文件（因SUID的数字表示法是4，而减号表示只要包含即可）*/
-#find / -user linuxprobe -exec cp -arf {} /root/findresults/ \    
+#find / -user linuxprobe -exec cp -arf {} /root/findresults/ \;    
 /* 找出用户linuxprobe的文件并复制到/root/findresults目录*/
 
 
