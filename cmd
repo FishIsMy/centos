@@ -36,7 +36,8 @@
 #virsh net-list                  /*查看虚拟网络状况*/
 #virsh net-destroy default       /*删除虚拟网卡*/
 #virsh net-undefine default
-
+#cd /etc/sysconfig/network-scripts ** vi ifcfg-eth0 ** /etc/resolve.conf
+#NM_CONTROLLED=no 实时生效
 
 
 
@@ -47,7 +48,9 @@
 #
 
 
+---------软件安装-----------------------------------
 
+yum localinstall stardict-3.0.1-22.puias6.x86_64.rpm   /*yum localinstall 可解决依赖关系*/
 
 
 
