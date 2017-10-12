@@ -3,7 +3,9 @@
 #elinks www.linuxprobe.com
 #history  /* /etc/profile环境配置文件、配置HISTSIZE，～/.bash_history */
 #last reboot
-
+#cd linuxprobe   ls !$     /*!$=linuxprobe 代表上一条命令的参数*/
+#dd if=/dev/cdrom of=RHEL-server-7.0-x86_64-LinuxProbe.Com.iso
+#dd if=/dev/zero of=560_file count=1 bs=560M
 
 
 
@@ -28,8 +30,16 @@
 #touch
 #rm
 #mv
-#cp
+i#cp
 #mkdir
+# tar xzvf etc.tar.gz -C /root/etc
+#grep entry /usr/share/gedit/plugins/snippets/docbook.xml >> /root/lines
+#find /etc -name "host*" -print /*查找/etc中所有以host开头的文件*/
+# find / -perm -4000 -print /*搜索整个系统中所有包含SUID的文件（因SUID的数字表示法是4，而减号表示只要包含即可）*/
+#find / -user linuxprobe -exec cp -arf {} /root/findresults/ \;    
+/* 找出用户linuxprobe的文件并复制到/root/findresults目录*/
+
+
 
 -------网络配置-------------------------------------------------------------------------------------------------
 
