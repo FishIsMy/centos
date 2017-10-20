@@ -60,14 +60,23 @@ i#cp
 
 ---------软件安装-----------------------------------
 
-yum localinstall stardict-3.0.1-22.puias6.x86_64.rpm   /*yum localinstall 可解决依赖关系*/
+#yum localinstall stardict-3.0.1-22.puias6.x86_64.rpm   /*yum localinstall 可解决依赖关系*/
 
 
 ---------系统设定--------------------------------------
 
 #vi /etc/sysconfig/ntpd#允许BIOS与系统时间同步，添加下面一行。
-SYNC_HWCLOCK=yes
+#SYNC_HWCLOCK=yes
 
+---------管理员命令------------------------------------
+
+#netstat  /*netstat - 显示网络连接，路由表，接口状态，伪装连接，网络链路信息和组播成员组。*/
+
+---------命令重定向------------------------------------
+
+#ls cmd 1>>out.txt 2>&1
+#50 16 * * * root rm-rf /abc/* 2>&1 &  
+/*&1可以说是文件描述符1，1一般代表STDOUT_FILENO，实际上就是一个dup2(2)调用，他标准输出到all_result，然后赋值标准输出到文件描述符2(STDERR_FILENO)，其后果就是文件描述符1和2指向同一个文件表项，也可以说错误的输出被合并到了。0表示键盘输入，1表示屏幕输出，2表示错误输出，把标准出错重定向到标准输出，然后扔到/DEL/NULL下面，也就是把所有标准输出和标准出错都扔到垃圾桶里。最后一个& 是让该命令在后台执行。*/
 
 
 ---------github------------------------------------------------------------------------------------------------
@@ -80,3 +89,8 @@ SYNC_HWCLOCK=yes
 #git commit -m "promote lines"   /*提交到本地仓库*/
 #git remote add origin git@github.com:FishIsMy/centos.git    /*需要执行git init进行初始化*/
 #git push -u origin master       /*推送到远程仓库分支下*/
+
+----------samba服务器--------------------------------
+注意：homes段中的自动宿主目录可浏览权限，继承自global段。当homes段中browseable=no时，只能查看宿主目录。
+
+
